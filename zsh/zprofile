@@ -1,0 +1,13 @@
+#!/bin/sh
+
+export QT_QPA_PLATFORM=wayland
+export HISTFILE=/home/samjackson/.zsh_history 
+
+ttynum=$(tty | sed 's:/dev/tty::')
+
+# if we're in tty, which is loaded on startup, and we don't have an active wayland display
+# then run our launch script
+if [ "$ttynum" = "1" ] && [ -z "$WAYLAND_DISPLAY" ]; then
+	echo "[launching dwl]" >> ~/zlog
+	exec ~/.config/dwl/launch.sh
+fi
