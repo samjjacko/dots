@@ -1,0 +1,63 @@
+body {
+	--radius-s: 0px;
+	--radius-m: 0px;
+	--radius-l: 0px;
+	--input-radius: 0px;
+	--tab-radius-active: 0px;
+	--checkbox-radius: 0px;
+	--toggle-radius: 0px;
+	--toggle-thumb-radius: 0px;
+	--slider-thumb-radius: 0px;
+}
+body {
+  --workspace-background-translucent: rgb(from #05050f r g b / 0.70);
+  --background-primary: #0E1115;
+  --tab-background-active: transparent;
+  --titlebar-background: transparent;
+  --tab-outline-color: transparent;
+  --text-normal: #f1f1f1;
+  --tab-font-size: 0.85em;
+  --font-text-theme: "Lato-Regular", sans-serif;
+	font-weight: 350;
+	font-style: normal;
+	/* this one controls the width of the main text box inside the editor */
+  --file-line-width: 57em;
+}
+
+/* .markdown-source-view, .markdown-preview-view { max-width: 70%; margin: auto; }  */
+
+
+
+.workspace-tab-header.mod-active.is-active,
+.workspace-split.mod-root,
+.workspace-split.mod-root .view-content,
+.workspace-split.mod-root .view-header,
+.workspace-tab-container,
+.view-header-title-container:not(.mod-at-end):after,
+.custom-frames-frame,
+.is-focused .workspace-leaf.mod-active .view-header {
+  background: transparent !important;
+  color: #fff;
+}
+.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
+	display: none;
+}
+
+svg * {
+	stroke-linecap: square;
+	stroke-linejoin: miter;
+	rx: 0;
+	ry: 0;
+}
+
+.menu {
+	padding: var(--size-2-1);
+}
+
+.menu-item {
+	padding: var(--size-4-1) var(--size-4-2);
+}
+
+.menu-separator {
+	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}

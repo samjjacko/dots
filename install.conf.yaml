@@ -1,52 +1,24 @@
 - defaults:
-  link:
-    create: true
-    relink: true
+    link:
+      create: true
+      relink: true
+
+- create:
+    - ~/.config/tmux
+    - ~/.config/alacritty
+    - ~/.config/nvim
 
 - link:
-  ~/.config/dwl/autostart.sh: dwl/autostart.sh
-  ~/.config/dwl/launch.sh: dwl/launch.sh
-  ~/dwl/config.h: dwl/config.h
-  ~/dwl/config.def.h: dwl/config.def.h
-  
-  ~/.config/dwlb/config.h: dwlb/config.h
-  ~/.config/dwlb/config.def.h: dwlb/config.def.h
-  ~/scripts/dwlbstatus.sh: dwlb/dwlbstatus.sh
+    ~/.config/nvim/:
+      path: nvim/*
+      glob: true
+    ~/.config/tmux/tmux.conf: tmux/tmux.conf
+    ~/.zprofile: zsh/zprofile
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh/themes/moodysam.zsh-theme: zsh/moodysam.zsh-theme
+    ~/.config/fastfetch/:
+      path: fastfetch/*
+      glob: true
+    "~/Desktop/productivity/I will succeed/.obsidian/themes/moodysam/theme.css": apps/obsidian/themes/theme.css
+    ~/.config/alacritty/alacritty.toml: alacritty/alacritty.toml
 
-  ~/.config/foot/foot.ini: foot/foot.ini
-  ~/.config/fuzzel/fuzzel.ini: fuzzel/fuzzel.ini
-  ~/.config/nvim/:
-    path: nvim/*
-    glob: true
-  ~/.qmmp:
-    path: qmmp/*
-    glob: true
-  ~/.config/tmux/tmux.conf: tmux/tmux.conf
-
-  ~/.zprofile: zsh/zprofile
-  ~/.zshrc: zsh/zshrc
-  ~/.oh-my-zsh/themes/moodysam.zsh-theme: zsh/moodysam.zsh-theme
-- create:
-  - ~/.config/dwl/patches
-
-# - shell:
-# echo "setting up dwl"
-# echo "installing required dependencies"
-# exec ./void-dependencies.sh
-# curl -O https://codeberg.org/dwl/dwl/archive/v0.7.tar.gz
-# tar -xzf v0.7.tar.gz && rm v0.7.tar.gz
-# curl -O --output-dir ~/.config/dwl/patches https://codeberg.org/dwl/dwl-patches/raw/branch/main/patches/ipc/ipc.patch
-# patch -d ~/dwl -i ~/.config/dwl/patches/ipcfix.patch 
-# patch -d ~/dwl -p1 -i ~/.config/dwl/patches/ipc.patch
-# echo "ignore that error, its wrong :)"
-# curl -O --output-dir ~/.config/dwl/patches https://codeberg.org/dwl/dwl-patches/raw/branch/main/patches/genericgaps/genericgaps.patch 
-# patch -d ~/dwl -p1 -i ~/.config/dwl/patches/genericgaps.patch
-# cp -r ./dwl/config* ~/dwl 
-# sudo make install -C ~/dwl
-# echo "setting up dwlb"
-# git clone --branch samj-read_socket_fix https://github.com/samjjacko/dwlb 
-# cp -r ./dwlb/config* ~/dwlb 
-# sudo make install -C ~/dwlb
-# echo "installing apps"
-# exec ./user-programs.sh
-# echo "done. before you reboot, have a look at ~/.zprofile and update the wlr-randr output to your actual monitor name"

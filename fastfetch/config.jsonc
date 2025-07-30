@@ -1,0 +1,53 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+"logo":{
+"source": "/Users/samjackson/.config/fastfetch/lightning_small.txt",
+"padding": {"top":0,"left":0,"right":2, "bottom":0}
+},
+"display":{
+"brightColor": true, 
+"color": {
+    "keys":"blue",
+    "title":"blue"
+  },
+"percent": {
+        "type": 9,         // 1=number, 2=bar, 3=both, 9=colored number
+        "color": {
+            "green": "green",
+            "yellow": "magenta",
+            "red": "light_red"
+        }
+    }
+}, 
+ "modules": [
+    "title",
+    "separator",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "display",
+    "de",
+    "wm",
+    "wmtheme",
+    "theme",
+    "icons",
+    "font",
+    "cursor",
+    "terminal",
+    "terminalfont",
+    "cpu",
+    "gpu",
+    "memory",
+    "swap",
+    "disk",
+    "localip",
+    "battery",
+    "poweradapter",
+    "locale",
+    "break",
+    "colors"
+  ]
+}
