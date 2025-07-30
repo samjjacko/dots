@@ -5,7 +5,8 @@ padding = {x = 20, y = 30}
 opacity = 0.9
 # Default colors
 [colors.primary]
-background = '#0E1115'
+background = '#0E0D12'
+#background = '#07070d'
 foreground = '#7b88a1'
 
 # Normal colors
