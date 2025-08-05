@@ -37,8 +37,9 @@ i, em, span.cm-em {
 .markdown-source-view.mod-cm6 .cm-content {
 	color: #beceeb;
 }
-
-
+.obsidian-app .mod-windows .titlebar {
+	border-color: transparent;
+}
 
 
 .workspace-tab-header.mod-active.is-active,

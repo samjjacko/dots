@@ -22,3 +22,10 @@
     "~/Desktop/productivity/I will succeed/.obsidian/themes/moodysam/theme.css": apps/obsidian/themes/theme.css
     ~/.config/alacritty/alacritty.toml: alacritty/alacritty.toml
 
+- shell:
+  - "./brew-install.sh"
+  - [brew bundle --file=Brewfile, installing as much bloat as possible]
+  - [/Applications/Zen.app/Contents/MacOS/zen -no-remote -ProfileManager, Create a profile and name it Default then start it]
+  - chmod +x apps/zen/zensetup.sh
+  - [./apps/zen/zensetup.sh, attempting to set up zen profile; if you named it something other than Default you might have to go back and fix it]
+

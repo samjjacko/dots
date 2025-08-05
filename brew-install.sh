@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+
+# pinched from jajaperson ;)
+function homebrew-install() {
+  if (( $+commands[brew] )); then
+    echo "Homebrew is already installed!"
+  else
+    echo "Homebrew is not installed. Installing it now..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+}
+
+homebrew-install
+
